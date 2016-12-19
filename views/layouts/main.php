@@ -39,10 +39,10 @@ AppAsset::register($this);
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
-            ['label' => 'User Profile', 'url' => ['/user/settings/profile']],
-            ['label' => 'Admin Login', 'url' => ['/user/admin/index']],
+            ['label' => 'User Profile', 'url' => ['/user/settings/profile'], 'visible' => !Yii::$app->user->isGuest],
+            ['label' => 'Admin', 'url' => ['/user/admin/index'], 'visible' => !Yii::$app->user->isGuest && Yii::$app->user->identity->isAdmin],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
+                ['label' => 'Login', 'url' => ['/user/security/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
