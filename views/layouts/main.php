@@ -27,7 +27,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'Ict confrence',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -38,7 +38,10 @@ AppAsset::register($this);
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => 'Schedule', 'url' => ['/site/schedule']],
+            ['label' => 'Speakers', 'url' => ['/site/speakers']],
+           
+            ['label' => 'Profile', 'url' => ['/user/profile']],
             ['label' => 'User Profile', 'url' => ['/user/settings/profile'], 'visible' => !Yii::$app->user->isGuest],
             ['label' => 'Admin', 'url' => ['/user/admin/index'], 'visible' => !Yii::$app->user->isGuest && Yii::$app->user->identity->isAdmin],
             Yii::$app->user->isGuest ? (
@@ -68,13 +71,17 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-right">NAME: Sydney Parker * *   
+   ID#: 2012022741 - - -</p>
+        <p class="pull-left">&copy; My Applied Web Final Project <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+<!--        <p class="pull-right"><?= Yii::powered() ?></p>-->
     </div>
 </footer>
 
-<?php $this->endBody() ?>
+
+   
+<!--S<?php $this->endBody() ?>-->
 </body>
 </html>
 <?php $this->endPage() ?>
