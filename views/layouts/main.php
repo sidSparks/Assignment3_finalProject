@@ -36,17 +36,18 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'regester', 'url' => ['/site/contact']],
-            ['label' => 'Venue', 'url' => ['/site/about']],
-            ['label' => 'Schedule', 'url' => ['/site/schedule']],
-            ['label' => 'Speakers', 'url' => ['/site/speakers']],
+            ['label' => 'Home', 'url' => ['/web/index']],
+            ['label' => 'Register', 'url' => ['/user/registration/register'], 'visible' => Yii::$app->user->isGuest],
+            ['label' => 'Venue', 'url' => ['/web/about']],
+            ['label' => 'Schedule', 'url' => ['/web/schedule']],
+            ['label' => 'Speakers', 'url' => ['/web/speakers']],
            
             ['label' => 'Profile', 'url' => ['/user/profile']],
             ['label' => 'User Profile', 'url' => ['/user/settings/profile'], 'visible' => !Yii::$app->user->isGuest],
             ['label' => 'Admin', 'url' => ['/user/admin/index'], 'visible' => !Yii::$app->user->isGuest && Yii::$app->user->identity->isAdmin],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/user/security/login']]
+                
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
@@ -82,7 +83,7 @@ AppAsset::register($this);
 
 
    
-<!--S<?php $this->endBody() ?>-->
+<?php $this->endBody() ?>
 </body>
 </html>
 <?php $this->endPage() ?>

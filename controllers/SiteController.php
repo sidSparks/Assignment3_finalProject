@@ -113,23 +113,5 @@ class SiteController extends Controller
         ]);
     }
 
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
-    }
-    
-     public function actionSchedule()
-    {
-        return $this->render('Schedule');
-    }
-    
-     public function actionSpeakers()
-    {
-        return $this->render('speakers');
-    }
+   
 }

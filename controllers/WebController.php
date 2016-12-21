@@ -66,6 +66,7 @@ class WebController extends Controller
    
 
     /**
+    /**
      * Displays about page.
      *
      * @return string
@@ -78,5 +79,10 @@ class WebController extends Controller
      public function actionSchedule()
     {
         return $this->render('Schedule');
+    }
+    
+     public function actionSpeakers()
+    {
+        return $this->render('speakers');
     }
 }
