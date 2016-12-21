@@ -37,7 +37,8 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
+            ['label' => 'regester', 'url' => ['/site/contact']],
+            ['label' => 'Venue', 'url' => ['/site/about']],
             ['label' => 'Schedule', 'url' => ['/site/schedule']],
             ['label' => 'Speakers', 'url' => ['/site/speakers']],
            

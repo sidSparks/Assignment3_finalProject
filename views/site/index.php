@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'My Final Project';
 ?>
 <div class="site-index">
 
@@ -13,7 +13,7 @@ $this->title = 'My Yii Application';
 
       <p>Every year the brightest web designers and front-end developers descend on Chicago to discuss the latest technologies. Join us this August!</p>
 
-      <a href="profile.php">Register Now</a>
+      <a href="contact.php" >Register Now</a>
 
     </section>
 
